@@ -1,1 +1,70 @@
-# index3.html
+<html>
+        <body style="text-align:center; margin-top:100px; background-color:black; color:white;">
+            <h1> Hero Academic Scanner</h1>
+            <p id="message"></p>
+            <input type ="text" id="powerBox">
+            <br><br>
+
+            <img id="superman" src="superman.jpg" width="150px" height="150px" style="display:none";>
+            <img id="spiderman" src="spiderman.jpg" width="150px" height="150px" style="display:none";>
+            <img id="robin" src="robin.jpg" width="150px" height="150px" style="display:none";>
+            <img id="citizen" src="citizen.jpg" width="150px" height="150px" style="display:none";>
+
+              <button onclick="scanePower()">Scane power</button>
+
+            
+        
+        <script>
+        
+        function scanePower() {
+            let power=document.getElementById("powerBox").value;
+
+            if (power >="90") {
+                document.body.style.backgroundColor="gold";
+                document.getElementById("superman").style.display="block";
+                document.getElementById("spiderman").style.display="none";
+                document.getElementById("robin").style.display="none";
+                document.getElementById("citizen").style.display="none";
+                document.getElementById("message").innerText="S-class Hero: God Level!";
+            }
+                
+                else if (power>="60") {
+                document.getElementById("superman").style.display="none";
+                document.getElementById("spiderman").style.display="block";
+                document.getElementById("robin").style.display="none";
+                document.getElementById("citizen").style.display="none";
+                document.body.style.backgroundColor="deepskyblue";
+                document.getElementById("message").innerText="A-class Hero: Professional!";
+                
+
+            }
+            else if (power >="30") {
+                document.getElementById("superman").style.display="none";
+                document.getElementById("spiderman").style.display="none";
+                document.getElementById("robin").style.display="block";
+                document.getElementById("citizen").style.display="none";
+                document.body.style.backgroundColor="deepskyblue";
+                document.getElementById("message").innerText="B-class: Hero in a Tranning!";
+                
+
+            }
+            else {
+                document.getElementById("superman").style.display="none";
+                document.getElementById("spiderman").style.display="none";
+                document.getElementById("robin").style.display="none";
+                document.getElementById("citizen").style.display="block";
+                document.body.style.backgroundColor="gray";
+                document.getElementById("message").innerText="Normal citizen. Stay safe!";
+ 
+            
+
+            }
+        
+        }
+
+        
+    </script>
+    </body>
+
+
+</html>
